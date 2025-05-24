@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family:Ancizar Serif;
+    color:white;
+}
+
+/* NAV BAR */
+.nav{
+    /* border:2px solid green; */
+    height:6rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* NAV CONTENT 01*/
+
+/* LOGO */
+.logo-img{
+    border:2px solid goldenrod;
+    padding:0.5rem;
+    margin:0.5rem;
+    border-radius: 1.5rem;
+    color:goldenrod;
+    text-shadow: 0 0 5px goldenrod;
+    box-shadow: 0 0 10px goldenrod;
+    font-size: 1.92rem;
+    font-weight: bold;
+}
+
+#navcontent1{
+    margin: 0 2rem 0 7rem;
+}
+
+/* NAV CONTENT 02 */
+.nav-options{
+    padding:0.5rem 1rem;
+    text-decoration: none;
+    font-size: 0.98rem;
+    color:white;
+}
+
+button{
+    margin:0.2rem;
+    padding:0.2rem;
+    background-color:black;
+    border:none;
+    color:white;
+    font-weight: bold;
+}
+
+a{
+    transition: color 0.8s,
+        text-shadow 0.8s,
+        box-shadow 0.8s;
+}
+
+a:hover{
+    color:rgb(20, 202, 234);
+    text-shadow: 0 0 2rem rgb(20, 202, 234);
+    box-shadow: 0 0 2rem rgb(8, 205, 240);
+}
+
+/* NAV CONTENT 03 */
+
+.hire-me button{
+    background-color: #4169E1;
+    height:2.3rem;
+    padding: 8px 16px;
+    border-radius:0.5rem;
+    text-shadow: 0 0 50px white;
+}
+
+#navcontent3{
+    margin: 0 5rem 0 2rem;
+}
+
+.logo-img, .hire-me button, a :hover{
+    cursor: pointer;
+}
+
+
+
+
+/* MAIN-CONTENT */
+.page{
+    display: none;
+    height: 55rem;
+    border: 2px solid white;
+    padding:20px;
+    border-radius: 10px;
+    margin:20px auto;
+    width: 90%;
+
+    opacity: 0; /* Initially invisible */
+    transform: translateY(20px); /* Slightly pushed down */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.page.active{
+    display: block;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0px); /* Moves up smoothly */
+}
+
+
+#home{
+    background-color: pink;
+}
+
+
+#work{
+    background-color: orange;
+}
+
+
+#about{
+    background-color: blue;
+}
+
+#services{
+    background-color: red;
+}
+
+#contact{
+    background-color: green;
+}
