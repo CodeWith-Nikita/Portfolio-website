@@ -11,14 +11,16 @@ body{
 }
 
 /* NAV BAR */
+
+
 .nav{
-    /* border:2px solid green; */
-    height:6rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+
 
 /* NAV CONTENT 01*/
 
@@ -56,10 +58,11 @@ button{
     font-weight: bold;
 }
 
-a{
+a{  
+    font-weight: bold;
     transition: color 0.8s,
-        text-shadow 0.8s,
-        box-shadow 0.8s;
+    text-shadow 0.8s,
+    box-shadow 0.8s;
 }
 
 a:hover{
@@ -72,14 +75,14 @@ a:hover{
 
 .hire-me button{
     background-color: #4169E1;
-    height:2.3rem;
     padding: 8px 16px;
     border-radius:0.5rem;
+    margin: 0.5rem;
     text-shadow: 0 0 50px white;
 }
 
 #navcontent3{
-    margin: 0 5rem 0 2rem;
+    margin: 0 5rem 0 7rem;
 }
 
 .logo-img, .hire-me button, a :hover{
@@ -91,8 +94,9 @@ a:hover{
 
 /* MAIN-CONTENT */
 .page{
-    display: none;
-    height: 55rem;
+    /* visibility: hidden; */
+    display:none;
+    height: 45rem;
     border: 2px solid white;
     padding:20px;
     border-radius: 10px;
@@ -105,30 +109,114 @@ a:hover{
 }
 
 .page.active{
-    display: block;
+    /* visibility: visible; */
+
+    display:block;
     opacity: 1; /* Fully visible */
     transform: translateY(0px); /* Moves up smoothly */
 }
 
 
+#home, #work, #about, #services, #contact {
+    background-color: #0a0a0b;
+    box-shadow: 0 0 2rem rgb(20, 202, 234);
+}
+
+.home-page-content{
+    display:flex;
+    height:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #home{
-    background-color: pink;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0;
+    text-align: center;
+}
+@keyframes roundText {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+#home h1{
+
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    color:gold;
+    font-size: 8rem;
+    text-shadow: 0.2rem 0.2rem 2rem gold;
+    animation: roundText 5s linear infinite;
+    transform-style: preserve-3d; /* added for 3d effect */
+
+}
+
+#home h2{
+    /* position: absolute;
+    top:20rem; */
+    font-size: 5rem;
+    color:white;
+    text-shadow: 4px 4px 4px #000c66;
+}
+
+#home strong{
+    color:blue;
+    text-shadow: 2px 2px 3px whitesmoke;
+}
+
+#home article{
+    /* position: absolute;
+    top: 26rem; */
+    max-width:45rem;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 
-#work{
-    background-color: orange;
+@media (max-width:448px){
+    .nav{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
+@media (max-width:1020px){
 
-#about{
-    background-color: blue;
-}
+    html { font-size: 70%; }
 
-#services{
-    background-color: red;
-}
+    #navcontent3{
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .nav{
+        display:flex;
+        flex-direction: column;
+        /* justify-content:space-evenly; */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height:10%;
+    } 
 
-#contact{
-    background-color: green;
+    .hire-me{
+        position: absolute;
+        bottom:0;
+    }
+    .navcontent{
+        margin:1rem;
+    }
+
+    #navcontent1{
+        margin: 0 2rem 0 3rem;
+    }
+    
 }
