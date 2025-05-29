@@ -38,3 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+// image animation using co-pilot
+
+document.querySelectorAll(".image-box").forEach(box => {
+  box.addEventListener("mouseenter", () => {
+    box.style.transform = "rotateY(10deg) scale(1.15)";
+  });
+  box.addEventListener("mouseleave", () => {
+    box.style.transform = "rotateY(0) scale(1)";
+  });
+});
+
